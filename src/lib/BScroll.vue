@@ -205,8 +205,10 @@
             })
           } else if (this.pullUpLoad) {
             this.isPullUpLoad = false
-            this.scroll.finishPullUp()
-            this.refresh()
+            setTimeout(() => {
+              this.scroll.finishPullUp()
+              this.refresh()
+            })
           } else {
             this.refresh()
           }
